@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Sencillo{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/sencillo.css">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+<div class="container">
+	<div id="header">
+		<div class="row">
+			<div class="col-xs-6">
+				<h1><a href="/" class="logo-link">Sencillo</a></h1>
+			</div>
+			<div class="col-xs-6">
+				<ul class="nav nav-pills pull-right main-nav" style="margin-top:20px">
+					<li><a href="/queessencillo">¿Qué es sencillo?</a></li>
+					<li><a href="/comofunciona">¿Cómo funciona?</a></li>
+					{% if user is defined %}
+					<li><a href="/{{ user.username }}">Bienvenido, {{ user.username }}</a></li>
+					{% else %}
+					<li><a href="/registro">Registro</a></li>
+					<li><a href="/login">Ingreso</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<hr />
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		{% block content %}{% endblock %}
+	</div>
+	<div id="footer">
+	<hr />
+	<p>Copyright (c) 2014. Todos los derechos reservados. Términos de uso | Política de privacidad</p>
+	</div>
+</div>
+</body>
+
+</html>

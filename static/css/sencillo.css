@@ -1,0 +1,17 @@
+.main-nav {
+	display: inline-block;
+	vertical-align: middle
+}
+
+#footer {
+	margin-top: 100px
+}
+
+.logo-link {
+	text-decoration: none;
+	color: black;
+}
+
+.logo-link:hover {
+	text-decoration: none;
+}
