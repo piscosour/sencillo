@@ -19,6 +19,7 @@
 					<li><a href="/comofunciona">¿Cómo funciona?</a></li>
 					{% if user is defined %}
 					<li><a href="/{{ user.username }}">Bienvenido, {{ user.username }}</a></li>
+					<li><a href="/logout">Cerrar sesión</a></li>
 					{% else %}
 					<li><a href="/registro">Registro</a></li>
 					<li><a href="/login">Ingreso</a></li>

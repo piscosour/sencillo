@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<h2>Hacer una recarga en tu cuenta</h2>
+		<form action="/recarga" method="POST" style="margin-top:60px">
+			<div class="form-group">
+				<label for="code">Código de recarga</label>
+				<input type="text" class="form-control" name="code" placeholder="Destinatario">
+			</div>
+			<button type="submit" class="btn pull-right">Activar recarga</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

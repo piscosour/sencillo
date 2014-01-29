@@ -2,11 +2,12 @@ class User:
 
 	"""A registered user with an account."""
 
-	def __init__(self, username, password, email, phone=None):
+	def __init__(self, username, email, credit, mobile=None):
 		self.username = username
-		self.password = password
 		self.email = email
-		self.phone = phone
+		self.credit = credit
+		self.mobile = mobile
+
 
 
 class Payment:

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h2>Usuarios registrados</h2>
+		<table class="table table-striped">
+			<thead>
+				<th>Nombre de usuario</th>
+				<th>Correo electrónico</th>
+				<th>Celular</th>
+				<th>Saldo</th>
+			</thead>
+			<tbody>
+				{% for entry in user_data %}
+				<tr>
+					<td><a href="/{{ entry.username }}">{{ entry.username }}</a></td>
+					<td>{{ entry.email }}</td>
+					<td>{{ entry.mobile }}</td>
+					<td>{{ entry.credit }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

@@ -8,12 +8,42 @@
 	<div class="col-md-9">
 		<div class="row">
 			<div class="col-md-12" style="margin-top:20px">
-				<button class="btn btn-primary btn pull-right">Nuevo pago</button>
+				<p class="lead pull-left">Tu saldo es de S/.{{ user.credit }}</p>
+				<div class="pull-right">
+					<a href="/envio"><button class="btn btn-primary btn" style="margin-right:10px">Nuevo pago</button></a>
+					<a href="/recarga"><button class="btn btn-primary btn">Nueva recarga</button></a>
+				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<h3>Historial de transacciones</h3>
+				{% if history %}
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Fecha</th>
+							<th>Remitente</th>
+							<th>Destinatario</th>
+							<th>Monto</th>
+							<th>Descripción</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for entry in history %}
+						<tr>
+							<td>{{ entry.timestamp }}</td>
+							<td>{{ entry.sender }}</td>
+							<td>{{ entry.recipient }}</td>
+							<td>{% if user.usename == entry.sender %}-{% endif %}{{ entry.amount }}</td>
+							<td>{{ entry.description }}</td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+				{% else %}
+				<p>No tienes ninguna transacción registrada.</p>
+				{% endif %}
 			</div>
 		</div>
 	</div>

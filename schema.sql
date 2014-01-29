@@ -1,10 +1,11 @@
 drop table if exists users;
-create table user (
+create table users (
 	id integer primary key autoincrement,
 	username text not null,
 	password text not null,
 	email text not null,
-	phone text
+	mobile text,
+	credit integer
 );
 drop table if exists payments;
 create table payments (
