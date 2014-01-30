@@ -175,6 +175,15 @@ def teardown_request(exception):
 	if db is not None:
 		db.close()
 
+# static pages
+@app.route('/queessencillo')
+def about_page():
+	return render_template('about.html')
+
+@app.route('/comofunciona')
+def description_page():
+	return render_template('description.html')
+
 # run app
 
 if __name__ == "__main__":

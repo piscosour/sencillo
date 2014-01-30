@@ -4,7 +4,7 @@
 	<div class="col-xs-12">
 		<div class="jumbotron">
 			<h1>¿Tienes Sencillo?</h1>
-			<p class="lead">Sencillo es la manera más sencilla de hacer compras y pagos por Internet</p>
+			<p class="lead">Sencillo es la manera más fácil y segura de enviar dinero a tus amigos y familiares</p>
 		</div>
 	</div>
 </div>
@@ -44,8 +44,8 @@
 	<div class="col-xs-3 center-block">
 		<h4>Usuarios</h4>
 		<ul class="list-unstyled">
-			<li>Crea una cuenta</li>
-			<li>Ingresa a tu cuenta</li>
+			<li><a href="{{ url_for('new_user') }}">Crea una cuenta</a></li>
+			<li><a href="{{ url_for('login_user') }}">Ingresa a tu cuenta</a></li>
 			<li>Aprende a usar Sencillo</li>
 			<li>Puntos de acceso</li>
 		</ul>
@@ -70,8 +70,8 @@
 	<div class="col-xs-3">
 		<h4>Sobre Sencillo</h4>
 		<ul class="list-unstyled">
-			<li>¿Qué es Sencillo?</li>
-			<li>¿Cómo funciona?</li>
+			<li><a href="{{ url_for('about_page') }}">¿Qué es Sencillo?</a></li>
+			<li><a href="{{ url_for('description_page') }}">¿Cómo funciona?</a></li>
 			<li>Nuestro Equipo</li>
 			<li>Nuestros Aliados</li>
 		</ul>
