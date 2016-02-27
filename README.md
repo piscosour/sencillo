@@ -1,5 +1,4 @@
-# sencillo
-## Creating spaces for safe exploration around electronic financial transactions un Peru
+# Sencillo: Creating spaces for safe exploration around electronic financial transactions un Peru
 
 Sencillo is a prototype for an electronic money platform/concept designed for Peru.
 
